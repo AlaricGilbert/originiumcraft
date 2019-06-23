@@ -1,0 +1,16 @@
+[
+{
+  "modid": "originiumcraft",
+  "name": "Originium Craft",
+  "description": "Doujin mod of Arknights",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["BBleae"],
+  "credits": "BBleae",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
