@@ -1,2 +1,4 @@
 #PARSE_ESCAPES
 item.pureOriginium.name=至纯源石
+tile.originiumOre.name=源石矿石
+itemGroup.originiumcraft=源石工艺

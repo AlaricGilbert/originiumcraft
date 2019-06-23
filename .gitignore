@@ -2,6 +2,10 @@
 !.gitignore
 !/src/
 !/README.MD
+!/gradlew
+!/gradlew.bat
+!/build.gradle
+!/gradle/
 # eclipse
 #bin
 #*.launch

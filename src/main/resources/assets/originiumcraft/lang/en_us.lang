@@ -1,2 +1,4 @@
 #PARSE_ESCAPES
 item.pureOriginium.name=Pure Originium
+tile.originiumOre.name=Originium Ore
+itemGroup.originiumcraft=Originium Craft
