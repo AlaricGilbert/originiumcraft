@@ -1,7 +1,17 @@
 //Items
+item.advanced_certificate.name=高级凭证
 item.artificial_originium.name=合成玉
+item.combat_record_advanced.name=高级作战记录
+item.combat_record_basic.name=基础作战记录
+item.combat_record_medium.name=中级作战记录
+item.combat_record_primary.name=初级作战记录
 item.longmen_coin.name=龙门币
 item.originium.name=至纯源石
+item.preclinical_art_1.name=技巧概要·卷1
+item.preclinical_art_2.name=技巧概要·卷2
+item.preclinical_art_3.name=技巧概要·卷3
+item.purchase_certificate.name=采购凭证
+item.qualification_certificate.name=资质凭证
 //Creative Tab
 itemGroup.arknights_materials=源石工艺 材料
 itemGroup.arknights_decorations=源石工艺 装饰性方块

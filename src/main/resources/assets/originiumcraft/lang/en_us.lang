@@ -1,7 +1,17 @@
 //Items
+item.advanced_certificate.name=Advanced Certificate
 item.artificial_originium.name=Artificial Originium
+item.combat_record_advanced.name=Advanced Combat Record
+item.combat_record_basic.name=Basic Combat Record
+item.combat_record_medium.name=Medium Combat Record
+item.combat_record_primary.name=Primary Combat Record
 item.longmen_coin.name=Longmen Coin
 item.originium.name=Originium
+item.preclinical_art_1.name=Preclinical Art Episode 1
+item.preclinical_art_2.name=Preclinical Art Episode 2
+item.preclinical_art_3.name=Preclinical Art Episode 3
+item.purchase_certificate.name=Purchase Certificate
+item.qualification_certificate.name=Qualification Certificate
 //Creative Tab
 itemGroup.arknights_materials=OriginiumCraft Materials
 itemGroup.arknights_decorations=OriginiumCraft Decorations

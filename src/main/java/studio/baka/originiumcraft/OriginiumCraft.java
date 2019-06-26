@@ -18,6 +18,7 @@ public class OriginiumCraft {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+        
         proxy.preInit(event);
     }
 
