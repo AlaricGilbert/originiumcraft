@@ -1,5 +1,7 @@
 [[English]](README.MD)|[中文]
 
+![](https://img.shields.io/jenkins/build/http/magictea.hicp.net:1919/job/OriginiumCraft.svg)![](https://img.shields.io/jenkins/coverage/jacoco/http/magictea.hicp.net:1919/job/OriginiumCraft.svg)
+
 # 源石工艺
 
 这里是将舟游带入Minecraft的mod！

@@ -1,4 +1,8 @@
+
+
 [English]|[[中文]](README_ZH.MD)
+
+![](https://img.shields.io/jenkins/build/http/magictea.hicp.net:1919/job/OriginiumCraft.svg)![](https://img.shields.io/jenkins/coverage/jacoco/http/magictea.hicp.net:1919/job/OriginiumCraft.svg)
 
 # Originium Craft
 
@@ -12,7 +16,7 @@ This is a mod which adds elements of mobile game "Arknights" into Minecraft!
 
 ## How to use
 
-Download the mod from our [Jenkin CI](http://magictea.hicp.net:1919/job/OriginiumCraft) and put it under your /mod folder!
+Download the mod from our [Jenkin CI](http://magictea.hicp.net:1919/job/OriginiumCraft)  and put it under your /mod folder!
 
 **NOTICE: The mod may need forge version 2838 to work! **
 
