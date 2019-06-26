@@ -1,7 +1,8 @@
 {
   "variants":{
-    "normal":{
-      "model":"originiumcraft:prts_terminal"
-    }
+    "facing=north":{"model":"originiumcraft:prts_terminal"},
+    "facing=east":{"model":"originiumcraft:prts_terminal","y":90},
+    "facing=south":{"model":"originiumcraft:prts_terminal","y":180},
+    "facing=west":{"model":"originiumcraft:prts_terminal","y":270}
   }
 }

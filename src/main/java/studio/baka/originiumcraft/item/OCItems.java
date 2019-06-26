@@ -15,6 +15,7 @@ public class OCItems {
     public static final Item COMBAT_RECORD_BASIC = new ItemBase("combat_record_basic");
     public static final Item COMBAT_RECORD_MEDIUM = new ItemBase("combat_record_medium");
     public static final Item COMBAT_RECORD_PRIMARY = new ItemBase("combat_record_primary");
+    public static final Item CREDIT_POINT = new ItemBase("credit_point");
     public static final Item LONGMEN_COIN =  new ItemBase("longmen_coin");
     public static final Item ORIGINIUM = new ItemOriginium();
     public static final Item PRECLINICAL_ARTS_1 = new ItemBase("preclinical_art_1");
