@@ -1,4 +1,10 @@
-#PARSE_ESCAPES
-item.pureOriginium.name=至纯源石
-tile.originiumOre.name=源石矿石
-itemGroup.originiumcraft=源石工艺
+//Items
+item.artificial_originium.name=合成玉
+item.longmen_coin.name=龙门币
+item.originium.name=至纯源石
+//Creative Tab
+itemGroup.arknights_materials=源石工艺 材料
+itemGroup.arknights_decorations=源石工艺 装饰性方块
+//Blocks
+tile.originium_ore.name=源石矿
+tile.prts_terminal.name=PRTS终端

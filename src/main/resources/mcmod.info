@@ -2,14 +2,14 @@
 {
   "modid": "originiumcraft",
   "name": "Originium Craft",
-  "description": "Doujin mod of Arknights",
+  "description": "A mod adds elements of Arknights to Minecraft.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["BBleae"],
-  "credits": "BBleae",
-  "logoFile": "",
+  "authorList": ["Alaric","BBleae","MoonCatH"],
+  "credits": "Arknights.",
+  "logoFile": "logo.jpg",
   "screenshots": [],
   "dependencies": []
 }

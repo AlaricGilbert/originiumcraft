@@ -1,17 +1,22 @@
 package studio.baka.originiumcraft.common;
 
+import studio.baka.originiumcraft.world.OreGenerator;
+import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import studio.baka.originiumcraft.common.block.OCBlocks;
-import studio.baka.originiumcraft.common.item.OCItems;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class CommonProxy {
-    public void preInit(FMLPreInitializationEvent event) {
-        OCItems.init();
-        OCBlocks.init();
+    /* The preInit events called in BOTH server and client.*/
+    public void preInit(FMLPreInitializationEvent event){
+        GameRegistry.registerWorldGenerator(new OreGenerator(),3);
     }
 
-    public void init(FMLInitializationEvent event) {
+    /* The init events called in BOTH server and client.*/
+    public void init(FMLInitializationEvent event){
+    }
+    /* We should do NOTHING with items render in the server proxy so in CommonProxy it should be a method with no content.*/
+    public void registerItemRenderer(Item item, int meta, String id){
 
     }
 }

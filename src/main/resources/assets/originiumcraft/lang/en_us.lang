@@ -1,4 +1,10 @@
-#PARSE_ESCAPES
-item.pureOriginium.name=Pure Originium
-tile.originiumOre.name=Originium Ore
-itemGroup.originiumcraft=Originium Craft
+//Items
+item.artificial_originium.name=Artificial Originium
+item.longmen_coin.name=Longmen Coin
+item.originium.name=Originium
+//Creative Tab
+itemGroup.arknights_materials=OriginiumCraft Materials
+itemGroup.arknights_decorations=OriginiumCraft Decorations
+//Blocks
+tile.originium_ore.name=Originium Ore
+tile.prts_terminal.name=PRTS Terminal

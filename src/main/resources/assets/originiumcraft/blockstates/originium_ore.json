@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "originiumcraft:originium_ore" }
+  "variants":{
+    "normal":{
+      "model":"originiumcraft:originium_ore"
     }
+  }
 }

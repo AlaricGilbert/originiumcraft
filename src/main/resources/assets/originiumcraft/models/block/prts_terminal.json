@@ -1,0 +1,81 @@
+{
+    "__comment": "Model generated using MrCrayfish's Model Creator (https://mrcrayfish.com/tools?id=mc)",
+    "textures": {
+        "stone_slab_top": "minecraft:blocks/stone_slab_top",
+        "prts_pad": "originiumcraft:blocks/prts_pad",
+        "stone_slab_top_center_32": "originiumcraft:blocks/stone_slab_top_center_32"
+    },
+    "display": {
+        "gui": {
+            "rotation": [ 30, 45, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.625, 0.625, 0.625 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 3, 0 ],
+            "scale": [ 0.25, 0.25, 0.25 ]
+        },
+        "fixed": {
+            "rotation": [ 0, 180, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "head": {
+            "rotation": [ 0, 180, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 315, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.4, 0.4, 0.4 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 75, 315, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.375, 0.375, 0.375 ]
+        }
+    },
+    "elements": [
+        {
+            "name": "Cube",
+            "from": [ 4, 0, 3 ], 
+            "to": [ 12, 0.5, 11 ], 
+            "faces": {
+                "north": { "texture": "#stone_slab_top_center_32", "uv": [ 4, 4, 12, 4.5 ] },
+                "east": { "texture": "#stone_slab_top_center_32", "uv": [ 4, 4, 12, 4.5 ] },
+                "south": { "texture": "#stone_slab_top_center_32", "uv": [ 4, 4, 12, 4.5 ] },
+                "west": { "texture": "#stone_slab_top_center_32", "uv": [ 4, 4, 12, 4.5 ] },
+                "up": { "texture": "#stone_slab_top_center_32", "uv": [ 4, 4, 12, 12 ] },
+                "down": { "texture": "#stone_slab_top_center_32", "uv": [ 4, 4, 12, 12 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 7.75, 0.5, 5.75 ], 
+            "to": [ 8.25, 9.7, 6.25 ], 
+            "faces": {
+                "north": { "texture": "#stone_slab_top", "uv": [ 0, 0, 0.5, 9.2 ] },
+                "east": { "texture": "#stone_slab_top", "uv": [ 0, 0, 0.5, 9.2 ] },
+                "south": { "texture": "#stone_slab_top", "uv": [ 0, 0, 0.5, 9.2 ] },
+                "west": { "texture": "#stone_slab_top", "uv": [ 0, 0, 0.5, 9.2 ] },
+                "up": { "texture": "#stone_slab_top", "uv": [ 0, 0, 0.5, 0.5 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 2, 7.75, 1 ], 
+            "to": [ 14, 8.25, 10 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "x", "angle": 45.0 },
+            "faces": {
+                "north": { "texture": "#stone_slab_top", "uv": [ 2, 0, 14, 0.5 ] },
+                "east": { "texture": "#stone_slab_top", "uv": [ 4, 0, 13, 0.5 ] },
+                "south": { "texture": "#stone_slab_top", "uv": [ 0, 0, 13, 0.5 ] },
+                "west": { "texture": "#stone_slab_top", "uv": [ 0, 0, 9, 0.5 ] },
+                "up": { "texture": "#prts_pad", "uv": [ 2, 3, 14, 12 ] },
+                "down": { "texture": "#stone_slab_top", "uv": [ 2, 3, 14, 12 ] }
+            }
+        }
+    ]
+}
