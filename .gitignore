@@ -2,6 +2,7 @@
 !.gitignore
 !/src/
 !/README.MD
+!/README_ZH.MD
 !/gradlew
 !/gradlew.bat
 !/build.gradle
