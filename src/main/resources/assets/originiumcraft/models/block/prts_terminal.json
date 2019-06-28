@@ -3,7 +3,8 @@
     "textures": {
         "stone_slab_top": "minecraft:blocks/stone_slab_top",
         "prts_pad": "originiumcraft:blocks/prts_pad",
-        "stone_slab_top_center_32": "originiumcraft:blocks/stone_slab_top_center_32"
+        "stone_slab_top_center_32": "originiumcraft:blocks/stone_slab_top_center_32",
+        "particle": "blocks/stone"
     },
     "display": {
         "gui": {

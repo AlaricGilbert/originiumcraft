@@ -1,12 +1,11 @@
 package studio.baka.originiumcraft.block;
 
-import net.minecraft.block.Block;
+
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import studio.baka.originiumcraft.OriginiumCraft;
@@ -37,7 +36,6 @@ public class BlockPRTSTerminal extends BlockHorizontal implements IHasModel {
 
         OCBlocks.BLOCKS.add(this);
         OCItems.ITEMS.add(new ItemBlock(this).setRegistryName("prts_terminal"));
-
         this.setSoundType(SoundType.STONE);
         this.setHardness(5.0f);
         this.setResistance(15.0f);
@@ -84,16 +82,17 @@ public class BlockPRTSTerminal extends BlockHorizontal implements IHasModel {
         return false;
     }
 
+
     /* Activate the PRTS gui after clicked. */
     @SideOnly(Side.CLIENT)
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
         if(!worldIn.isRemote) {
-
+            return true;
         }else {
             Minecraft.getMinecraft().displayGuiScreen(new GuiPRTSTerminal());
+            return true;
         }
-        return super.onBlockActivated(worldIn,pos,state,playerIn,hand,facing,hitX,hitY,hitZ);
     }
 }
