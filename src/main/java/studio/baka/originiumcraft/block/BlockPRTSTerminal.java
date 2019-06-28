@@ -6,6 +6,9 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import studio.baka.originiumcraft.OriginiumCraft;
 import studio.baka.originiumcraft.client.gui.GuiPRTSTerminal;
 import net.minecraft.block.SoundType;
@@ -82,6 +85,7 @@ public class BlockPRTSTerminal extends BlockHorizontal implements IHasModel {
     }
 
     /* Activate the PRTS gui after clicked. */
+    @SideOnly(Side.CLIENT)
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
