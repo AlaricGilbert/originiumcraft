@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "originiumcraft:items/diketone_array"
+    "layer0": "originiumcraft:items/ketone_array"
   }
 }
