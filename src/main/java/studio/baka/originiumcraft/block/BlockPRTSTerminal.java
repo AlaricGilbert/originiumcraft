@@ -35,7 +35,7 @@ public class BlockPRTSTerminal extends BlockHorizontal implements IHasModel {
         setCreativeTab(OCCreativeTabs.ArknightsDecorations);
 
         OCBlocks.BLOCKS.add(this);
-        OCItems.ITEMS.add(new ItemBlock(this).setRegistryName("prts_terminal"));
+        OCItems.ITEMS.add(new ItemBlock(this).setRegistryName("prts_terminal").setMaxStackSize(1));
         this.setSoundType(SoundType.STONE);
         this.setHardness(5.0f);
         this.setResistance(15.0f);

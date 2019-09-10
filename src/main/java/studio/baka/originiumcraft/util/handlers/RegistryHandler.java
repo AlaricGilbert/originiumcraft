@@ -3,8 +3,10 @@ package studio.baka.originiumcraft.util.handlers;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Tuple;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.registry.EntityEntryBuilder;
+import studio.baka.originiumcraft.command.CommandFreshPRTS;
 import studio.baka.originiumcraft.entity.EntityRegistryProperties;
 import studio.baka.originiumcraft.entity.OCEntities;
 import studio.baka.originiumcraft.item.OCItems;
@@ -22,6 +24,7 @@ import studio.baka.originiumcraft.util.ReferenceConsts;
 /* The registry event subscriber for OriginiumCraft mod. */
 @Mod.EventBusSubscriber
 public class RegistryHandler {
+
     @SubscribeEvent
     public static void onItemRegister(RegistryEvent.Register<Item> event){
         event.getRegistry().registerAll(OCItems.ITEMS.toArray(new Item[0]));
