@@ -90,3 +90,5 @@ itemGroup.arknights_decorations=源石工艺 装饰性方块
 //Blocks
 tile.originium_ore.name=源石矿
 tile.prts_terminal.name=PRTS终端
+//GUI
+gui.prts_terminal.title=PRTS 终端

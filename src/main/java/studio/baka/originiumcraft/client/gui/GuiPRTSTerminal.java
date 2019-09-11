@@ -1,75 +1,70 @@
 package studio.baka.originiumcraft.client.gui;
 
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.resources.I18n;
 import studio.baka.originiumcraft.util.ReferenceConsts;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.util.ResourceLocation;
 
 import java.io.IOException;
 
 public class GuiPRTSTerminal extends GuiScreen {
-    final ResourceLocation PRTSTexture = new ResourceLocation(ReferenceConsts.MODID,"textures/gui/prts_gui.png");
+    final ResourceLocation PRTSTexture = new ResourceLocation(ReferenceConsts.MODID, "textures/gui/prts_gui.png");
     int guiWidth = 256;
     int guiHeight = 144;
-    int closeButtonSize = 8;
+    studio.baka.originiumcraft.client.gui.GuiButton closeButton;
 
     @Override
     public void drawScreen(int mouthX, int mouthY, float partialTicks) {
         drawDefaultBackground();
 
-        int guiX = (width-guiWidth)/2;
-        int guiY = (height-guiHeight)/2;
+        int guiX = (width - guiWidth) / 2;
+        int guiY = (height - guiHeight) / 2;
         GlStateManager.pushMatrix();
         {
-            GlStateManager.color(1,1,1,1);
+            GlStateManager.color(1, 1, 1, 1);
             Minecraft.getMinecraft().renderEngine.bindTexture(PRTSTexture);
-            drawTexturedModalRect(guiX,guiY,0,0,guiWidth,guiHeight);
-        }
-        GlStateManager.popMatrix();
-        GlStateManager.pushMatrix();
-        {
-            GlStateManager.color(1,1,1,1);
-            Minecraft.getMinecraft().renderEngine.bindTexture(PRTSTexture);
-            int buttonXStart = guiX+guiWidth-closeButtonSize;
-            int buttonXEnd = guiX+guiWidth;
-            int buttonYStart = guiY;
-            int buttonYEnd = guiY+closeButtonSize;
-            int textureX = 0;
-            int textureY = 144;
-            if(mouthX>=buttonXStart&&mouthX<=buttonXEnd&&mouthY>=buttonYStart&&mouthY<=buttonYEnd)
-                textureX += closeButtonSize;
-            drawTexturedModalRect(buttonXStart,buttonYStart,textureX,textureY,closeButtonSize,closeButtonSize);
+            drawTexturedModalRect(guiX, guiY, 0, 0, guiWidth, guiHeight);
         }
         GlStateManager.popMatrix();
 
-        drawCenteredString(fontRenderer,"PRTS Terminal",width/2,guiY+5,0x000000);
+        closeButton.draw(mouthX, mouthY);
+
+        drawCenteredString(fontRenderer, I18n.format("gui.prts_terminal.title"), width / 2, guiY + 5, 0x000000);
         super.drawScreen(mouthX, mouthY, partialTicks);
     }
 
     @Override
     protected void mouseClicked(int mouseX, int mouseY, int mouseButton) throws IOException {
-        int guiX = (width-guiWidth)/2;
-        int guiY = (height-guiHeight)/2;
-        int buttonXStart = guiX+guiWidth-closeButtonSize;
-        int buttonXEnd = guiX+guiWidth;
-        int buttonYStart = guiY;
-        int buttonYEnd = guiY+closeButtonSize;
-        if(mouseX>=buttonXStart&&mouseX<=buttonXEnd&&mouseY>=buttonYStart&&mouseY<=buttonYEnd)
-            Minecraft.getMinecraft().displayGuiScreen(null);
+        closeButton.parentClicked(mouseX, mouseY);
         super.mouseClicked(mouseX, mouseY, mouseButton);
     }
 
 
     @Override
     public void initGui() {
-        super.initGui();
-    }
+        // init button
+        closeButton =
+                new studio.baka.originiumcraft.client.gui.GuiButton(
+                        this,
+                        (width + guiWidth) / 2 - 8,
+                        (height - guiHeight) / 2,
+                        8,
+                        8
+                );
+        closeButton.init(
+                PRTSTexture,
+                0,
+                144,
+                8,
+                144
+        );
+        closeButton.setClickedExecution(() -> {
+            Minecraft.getMinecraft().displayGuiScreen(null);
+        });
 
-    @Override
-    protected void actionPerformed(GuiButton button) throws IOException {
-        super.actionPerformed(button);
+        super.initGui();
     }
 
     @Override
