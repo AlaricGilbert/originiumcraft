@@ -2,6 +2,7 @@ package studio.baka.originiumcraft.util.handlers;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.util.Tuple;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.registry.EntityEntry;
@@ -11,6 +12,7 @@ import studio.baka.originiumcraft.entity.EntityRegistryProperties;
 import studio.baka.originiumcraft.entity.OCEntities;
 import studio.baka.originiumcraft.item.OCItems;
 import studio.baka.originiumcraft.block.OCBlocks;
+import studio.baka.originiumcraft.sounds.OCSounds;
 import studio.baka.originiumcraft.util.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -36,7 +38,7 @@ public class RegistryHandler {
     }
 
     @SubscribeEvent
-    public static void onEntityRegiter(RegistryEvent.Register<EntityEntry> event){
+    public static void onEntityRegister(RegistryEvent.Register<EntityEntry> event){
         int id =0x0;
         for(Tuple<Class<? extends  Entity>, EntityRegistryProperties> tuple: OCEntities.ENTITIYCLASSES){
             Class<? extends Entity> entityClass = tuple.getFirst();
@@ -51,6 +53,11 @@ public class RegistryHandler {
                     .build()
             );
         }
+    }
+    @SubscribeEvent
+    public static void onSoundRegister(RegistryEvent.Register<SoundEvent> event){
+        event.getRegistry().registerAll(OCSounds.SOUND_EVENTS.toArray(new SoundEvent[0]));
+
     }
 
     @SubscribeEvent

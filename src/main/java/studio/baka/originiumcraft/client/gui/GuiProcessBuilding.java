@@ -1,20 +1,20 @@
 package studio.baka.originiumcraft.client.gui;
 
-import net.minecraft.client.renderer.GlStateManager;
-import net.minecraft.client.resources.I18n;
-import studio.baka.originiumcraft.util.ReferenceConsts;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
+import studio.baka.originiumcraft.sounds.OCSounds;
+import studio.baka.originiumcraft.util.ReferenceConsts;
 
 import java.io.IOException;
 
-public class GuiPRTSTerminal extends GuiScreen {
-    final ResourceLocation PRTSTexture = new ResourceLocation(ReferenceConsts.MODID, "textures/gui/prts_gui.png");
+public class GuiProcessBuilding extends GuiScreen {
+    final ResourceLocation ProcessGuiTexture = new ResourceLocation(ReferenceConsts.MODID,"textures/gui/process_gui.png");
     int guiWidth = 256;
-    int guiHeight = 144;
+    int guiHeight = 172;
     GuiButton closeButton;
-
     @Override
     public void drawScreen(int mouthX, int mouthY, float partialTicks) {
         drawDefaultBackground();
@@ -24,14 +24,16 @@ public class GuiPRTSTerminal extends GuiScreen {
         GlStateManager.pushMatrix();
         {
             GlStateManager.color(1, 1, 1, 1);
-            Minecraft.getMinecraft().renderEngine.bindTexture(PRTSTexture);
+            Minecraft.getMinecraft().renderEngine.bindTexture(ProcessGuiTexture);
             drawTexturedModalRect(guiX, guiY, 0, 0, guiWidth, guiHeight);
         }
         GlStateManager.popMatrix();
 
+        // draw close button
         closeButton.draw(mouthX, mouthY);
+        drawCenteredString(fontRenderer, "←", (width-guiWidth) / 2 + 12, guiY + 4, 0xffffff);
 
-        drawCenteredString(fontRenderer, I18n.format("gui.prts_terminal.title"), width / 2, guiY + 5, 0x000000);
+
         super.drawScreen(mouthX, mouthY, partialTicks);
     }
 
@@ -48,19 +50,20 @@ public class GuiPRTSTerminal extends GuiScreen {
         closeButton =
                 new studio.baka.originiumcraft.client.gui.GuiButton(
                         this,
-                        (width + guiWidth) / 2 - 8,
-                        (height - guiHeight) / 2,
-                        8,
+                        (width - guiWidth) / 2 + 6,
+                        (height - guiHeight) / 2 + 4,
+                        28,
                         8
                 );
         closeButton.init(
-                PRTSTexture,
+                ProcessGuiTexture,
                 0,
-                144,
-                8,
-                144
+                172,
+                30,
+                172
         );
         closeButton.setClickedExecution(() -> {
+            Minecraft.getMinecraft().player.playSound(OCSounds.BTN_BACK, 0.5F, 1.0F);
             Minecraft.getMinecraft().displayGuiScreen(null);
         });
 

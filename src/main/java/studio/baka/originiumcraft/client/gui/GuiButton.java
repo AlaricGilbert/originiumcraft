@@ -37,7 +37,6 @@ public class GuiButton {
     }
 
     public void setClickedExecution(Runnable execution) {
-        Minecraft.getMinecraft().player.playSound(SoundEvents.UI_BUTTON_CLICK, 0.5F, 1.0F);
         clickedExecution = execution;
     }
 

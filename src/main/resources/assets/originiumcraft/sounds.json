@@ -1,0 +1,7 @@
+{
+  "btn_back": {
+    "category": "block",
+    "subtitle": "originiumcraft.sound.uiBack",
+    "sounds": ["originiumcraft:g_ui_back"]
+  }
+}

@@ -92,5 +92,7 @@ itemGroup.arknights_decorations=OriginiumCraft Decorations
 //Blocks
 tile.originium_ore.name=Originium Ore
 tile.prts_terminal.name=PRTS Terminal
+tile.building_base.name=Building Block(for debug only)
 //GUI
+gui.process.title=Process Station
 gui.prts_terminal.title=PRTS Terminal
