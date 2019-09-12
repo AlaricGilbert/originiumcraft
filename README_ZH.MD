@@ -14,9 +14,11 @@
 
 ## 如何使用
 
-从我们的 [Jenkin CI](http://magictea.hicp.net:1919/job/OriginiumCraft) 下载编译好的文件并将它放到你的模组文件夹中！
+~~从我们的 [Jenkin CI](http://magictea.hicp.net:1919/job/OriginiumCraft) 下载编译好的文件并将它放到你的模组文件夹中~~
 
-**注意: 本模组可能需要forge版本高于 2838 才能正常工作！ **
+**由于一些原因CI暂时下线，请自行编译食用**
+
+**注意: 本模组可能需要forge版本高于 2838 才能正常工作！**
 
 ## 如何参与贡献
 
