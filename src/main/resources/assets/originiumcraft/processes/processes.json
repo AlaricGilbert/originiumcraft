@@ -47,16 +47,18 @@
         "quantity": 1
       }
     ],
-    "byproducts": "originiumcraft:grinding_stone",
-    "byproducts": "originiumcraft:irregular_iron_group",
-    "byproducts": "originiumcraft:device_brandnew",
-    "byproducts": "originiumcraft:manganese",
-    "byproducts": "originiumcraft:alcohol_reversed",
-    "byproducts": "originiumcraft:rma7012",
-    "byproducts": "originiumcraft:ketone_agglutinated_group",
-    "byproducts": "originiumcraft:irregular_iron_group",
-    "byproducts": "originiumcraft:sugar_group",
-    "byproducts": "originiumcraft:originium_stone_solified_group"
+    "byproducts": [
+      "originiumcraft:grinding_stone",
+      "originiumcraft:irregular_iron_group",
+      "originiumcraft:device_brandnew",
+      "originiumcraft:manganese",
+      "originiumcraft:alcohol_reversed",
+      "originiumcraft:rma7012",
+      "originiumcraft:ketone_agglutinated_group",
+      "originiumcraft:irregular_iron_group",
+      "originiumcraft:sugar_group",
+      "originiumcraft:originium_stone_solified_group"
+    ]
   },
 
   {"Primary_Material_Process": ""},

@@ -37,6 +37,8 @@ public class OCProcessManager {
     }
 
     public static void register(OCProcess process) {
+        if(process==null||process.Materials==null)
+            return;
         switch (process.Materials.size()) {
             case 1:
                 processOneMaterial.add(process);
