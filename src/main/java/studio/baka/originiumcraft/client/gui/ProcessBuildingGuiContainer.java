@@ -7,6 +7,7 @@ import net.minecraft.inventory.Container;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import studio.baka.originiumcraft.inventory.ProcessBuildingContainer;
 import studio.baka.originiumcraft.sounds.OCSounds;
 import studio.baka.originiumcraft.util.ReferenceConsts;
 
@@ -21,6 +22,7 @@ public class ProcessBuildingGuiContainer extends GuiContainer {
     int guiHeight = 199;
     GuiButton closeButton;
 
+    ProcessBuildingContainer container;
 
     int getStartX(){
         return (width-guiWidth)/2;
@@ -30,6 +32,7 @@ public class ProcessBuildingGuiContainer extends GuiContainer {
     }
     public ProcessBuildingGuiContainer(Container inventorySlotsIn) {
         super(inventorySlotsIn);
+        container=(ProcessBuildingContainer) inventorySlotsIn;
     }
     @Override
     public void initGui() {
@@ -68,6 +71,13 @@ public class ProcessBuildingGuiContainer extends GuiContainer {
             // draw close button
             closeButton.draw(mouseX, mouseY);
             drawCenteredString(fontRenderer, "←", getStartX() + 10, getStartY() + 4, 0xffffff);
+
+            // draw percentage
+            if(!container.ProcessReady){
+                drawCenteredString(fontRenderer, "0%", getStartX() + 172, getStartY() + 30, 0xffffff);
+            }else{
+                drawCenteredString(fontRenderer, "10%", getStartX() + 170, getStartY() + 30, 0xffffff);
+            }
 
         }
         GlStateManager.popMatrix();

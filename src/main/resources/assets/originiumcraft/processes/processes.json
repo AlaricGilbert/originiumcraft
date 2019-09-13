@@ -1,0 +1,98 @@
+[
+  {"Advanced_Material_Process": ""},
+  {
+    "result": "originiumcraft:d32_steel",
+    "materials": [
+      {
+        "registryName": "originiumcraft:manganese_with_tree_water",
+        "quantity": 1
+      },
+      {
+        "registryName": "originiumcraft:grinding_stone_with_five_water",
+        "quantity": 1
+      },
+      {
+        "registryName": "originiumcraft:rma7024",
+        "quantity": 1
+      }
+    ],
+    "byproducts": [
+      "originiumcraft:manganese_with_tree_water",
+      "originiumcraft:rma7024",
+      "originiumcraft:grinding_stone_with_five_water",
+      "originiumcraft:alcohol_baima",
+      "originiumcraft:device_modified",
+      "originiumcraft:ketone_array",
+      "originiumcraft:irregular_iron_ingot",
+      "originiumcraft:polyester_ingot",
+      "originiumcraft:sugar_ingot",
+      "originiumcraft:originium_stone_solified_group"
+    ]
+  },
+
+  {"Intermediate_Material_Process": ""},
+  {
+    "result": "originiumcraft:grinding_stone_with_five_water",
+    "materials": [
+      {
+        "registryName": "originiumcraft:grinding_stone",
+        "quantity": 1
+      },
+      {
+        "registryName": "originiumcraft:irregular_iron_group",
+        "quantity": 1
+      },
+      {
+        "registryName": "originiumcraft:device_brandnew",
+        "quantity": 1
+      }
+    ],
+    "byproducts": "originiumcraft:grinding_stone",
+    "byproducts": "originiumcraft:irregular_iron_group",
+    "byproducts": "originiumcraft:device_brandnew",
+    "byproducts": "originiumcraft:manganese",
+    "byproducts": "originiumcraft:alcohol_reversed",
+    "byproducts": "originiumcraft:rma7012",
+    "byproducts": "originiumcraft:ketone_agglutinated_group",
+    "byproducts": "originiumcraft:irregular_iron_group",
+    "byproducts": "originiumcraft:sugar_group",
+    "byproducts": "originiumcraft:originium_stone_solified_group"
+  },
+
+  {"Primary_Material_Process": ""},
+  {
+    "result": "originiumcraft:originium_stone_solified_group",
+    "materials": [
+      {
+        "registryName": "originiumcraft:originium_stone_solified",
+        "quantity": 5
+      }
+    ],
+    "byproducts": [
+      "originiumcraft:originium_stone_solified",
+      "originiumcraft:device",
+      "originiumcraft:polyester",
+      "originiumcraft:irregular_iron",
+      "originiumcraft:ketone_agglutinated"
+    ]
+  },
+
+  {"Basic_Material_Process": ""},
+  {
+    "result": "originiumcraft:device",
+    "materials": [
+      {
+        "registryName": "originiumcraft:device_broken",
+        "quantity": 3
+      }
+    ],
+    "byproducts": [
+      "originiumcraft:device_broken",
+      "originiumcraft:diketone",
+      "originiumcraft:irregular_iron_fragment",
+      "originiumcraft:ester_material",
+      "originiumcraft:sugar_substitute",
+      "originiumcraft:originium_stone"
+    ]
+  }
+]

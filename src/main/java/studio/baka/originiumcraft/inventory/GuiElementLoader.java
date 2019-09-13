@@ -21,7 +21,7 @@ public class GuiElementLoader implements IGuiHandler {
         switch (ID)
         {
             case GUI_PROCESS_BUILDING:
-                return new ProcessBuidingContainer(player);
+                return new ProcessBuildingContainer(player);
             default:
                 return null;
         }
@@ -33,7 +33,7 @@ public class GuiElementLoader implements IGuiHandler {
         switch (ID)
         {
             case GUI_PROCESS_BUILDING:
-                return new ProcessBuildingGuiContainer(new ProcessBuidingContainer(player));
+                return new ProcessBuildingGuiContainer(new ProcessBuildingContainer(player));
             default:
                 return null;
         }
