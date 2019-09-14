@@ -81,10 +81,6 @@ public class ProcessBuildingContainer extends Container {
                     String byproductName = process.Byproducts.get(random.nextInt(process.Byproducts.size()));
                     player.dropItem(new ItemStack(Item.REGISTRY.getObject(new ResourceLocation(byproductName))), false);
                 }
-                if (OCProcessManager.tryMatch(inItems) == null) {
-                    outItem.setStackInSlot(0, ItemStack.EMPTY);
-                    ProcessReady = false;
-                }
             } else {
                 // return empty when taking behaviour is NOT valid.
                 return ItemStack.EMPTY;
@@ -97,9 +93,6 @@ public class ProcessBuildingContainer extends Container {
         if (process != null) {
             ProcessReady = true;
             outItem.setStackInSlot(0, new ItemStack(Item.REGISTRY.getObject(new ResourceLocation(process.Result))));
-            if (!OCProcessManager.canExactMatch(inItems, process)) {
-
-            }
         } else {
             ProcessReady = false;
             outItem.setStackInSlot(0, ItemStack.EMPTY);
@@ -156,5 +149,27 @@ public class ProcessBuildingContainer extends Container {
         }
 
         return itemstack;
+    }
+
+    @Override
+    public void onContainerClosed(EntityPlayer playerIn)
+    {
+        super.onContainerClosed(playerIn);
+
+        if (!this.world.isRemote)
+        {
+            for(int i = 0; i < 3; i++){
+                ItemStack stack = this.inItems.getStackInSlot(i);
+                if(stack!=null){
+                    playerIn.dropItem(stack,false);
+                    this.inItems.setStackInSlot(i,ItemStack.EMPTY);
+                }
+            }
+            ItemStack outStack = outItem.getStackInSlot(0);
+            if (outStack!=null){
+                playerIn.dropItem(outStack,false);
+                this.outItem.setStackInSlot(0,ItemStack.EMPTY);
+            }
+        }
     }
 }
