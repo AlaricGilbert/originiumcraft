@@ -9,8 +9,8 @@ import net.minecraft.util.ResourceLocation;
 import studio.baka.originiumcraft.OriginiumCraft;
 
 public class GuiButton {
-    private GuiScreen parent;
-    private int startX, startY, width, height;
+    protected GuiScreen parent;
+    protected int startX, startY, width, height;
     private ResourceLocation resourceLocation;
     private int textureStartX, textureStartY, firedTextureStartX, firedTextureStartY;
     private boolean initialized = false;

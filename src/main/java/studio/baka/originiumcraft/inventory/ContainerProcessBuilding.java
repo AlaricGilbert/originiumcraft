@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import java.util.Hashtable;
 import java.util.Random;
 
-public class ProcessBuildingContainer extends Container {
+public class ContainerProcessBuilding extends Container {
 
     public boolean ProcessReady = false;
 
@@ -30,7 +30,7 @@ public class ProcessBuildingContainer extends Container {
 
     protected Slot outSlot;
 
-    public ProcessBuildingContainer(EntityPlayer player) {
+    public ContainerProcessBuilding(EntityPlayer player) {
         super();
         this.world = player.world;
 
@@ -41,18 +41,18 @@ public class ProcessBuildingContainer extends Container {
                 return false;
             }
         });
-        this.addSlotToContainer(new SlotItemHandler(inItems, 0, 98, -1));
-        this.addSlotToContainer(new SlotItemHandler(inItems, 1, 68, 50));
-        this.addSlotToContainer(new SlotItemHandler(inItems, 2, 129, 50));
+        this.addSlotToContainer(new SlotItemHandler(inItems, 0, 98, 11));
+        this.addSlotToContainer(new SlotItemHandler(inItems, 1, 68, 62));
+        this.addSlotToContainer(new SlotItemHandler(inItems, 2, 129, 62));
 
         for (int i = 0; i < 3; ++i) {
             for (int j = 0; j < 9; ++j) {
-                this.addSlotToContainer(new Slot(player.inventory, j + i * 9 + 9, j * 18 + 8, 95 + i * 18));
+                this.addSlotToContainer(new Slot(player.inventory, j + i * 9 + 9, j * 18 + 8, 107 + i * 18));
             }
         }
 
         for (int i = 0; i < 9; ++i) {
-            this.addSlotToContainer(new Slot(player.inventory, i, i * 18 + 8, 153));
+            this.addSlotToContainer(new Slot(player.inventory, i, i * 18 + 8, 165));
         }
 
     }

@@ -1,6 +1,6 @@
 package studio.baka.originiumcraft.common;
 
-import studio.baka.originiumcraft.inventory.GuiElementLoader;
+import studio.baka.originiumcraft.client.gui.GuiElementManager;
 import studio.baka.originiumcraft.inventory.processing.OCProcessManager;
 import studio.baka.originiumcraft.util.ReferenceConsts;
 import studio.baka.originiumcraft.world.OreGenerator;
@@ -17,7 +17,7 @@ public class CommonProxy {
 
     /* The init events called in BOTH server and client.*/
     public void init(FMLInitializationEvent event){
-        new GuiElementLoader();
+        new GuiElementManager();
         OCProcessManager.register(ReferenceConsts.MODID);
     }
     /* We should do NOTHING with items render in the server proxy so in CommonProxy it should be a method with no content.*/

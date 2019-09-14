@@ -10,7 +10,6 @@ import net.minecraft.util.ResourceLocation;
 import java.io.IOException;
 
 public class GuiPRTSTerminal extends GuiScreen {
-    final ResourceLocation PRTSTexture = new ResourceLocation(ReferenceConsts.MODID, "textures/gui/prts_gui.png");
     int guiWidth = 256;
     int guiHeight = 144;
     GuiButton closeButton;
@@ -24,7 +23,7 @@ public class GuiPRTSTerminal extends GuiScreen {
         GlStateManager.pushMatrix();
         {
             GlStateManager.color(1, 1, 1, 1);
-            Minecraft.getMinecraft().renderEngine.bindTexture(PRTSTexture);
+            Minecraft.getMinecraft().renderEngine.bindTexture(OCGuiResources.GUI_PRTS);
             drawTexturedModalRect(guiX, guiY, 0, 0, guiWidth, guiHeight);
         }
         GlStateManager.popMatrix();
@@ -54,7 +53,7 @@ public class GuiPRTSTerminal extends GuiScreen {
                         8
                 );
         closeButton.init(
-                PRTSTexture,
+                OCGuiResources.GUI_PRTS,
                 0,
                 144,
                 8,

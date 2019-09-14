@@ -15,7 +15,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import studio.baka.originiumcraft.OriginiumCraft;
-import studio.baka.originiumcraft.inventory.GuiElementLoader;
+import studio.baka.originiumcraft.client.gui.GuiElementManager;
 import studio.baka.originiumcraft.item.OCItems;
 import studio.baka.originiumcraft.util.IHasModel;
 import studio.baka.originiumcraft.util.ReferenceConsts;
@@ -57,7 +57,10 @@ public class BlockBuildingBase extends BlockHorizontal implements IHasModel {
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
         if(!worldIn.isRemote) {
-            playerIn.openGui(OriginiumCraft.instance, GuiElementLoader.GUI_PROCESS_BUILDING,worldIn,pos.getX(),pos.getY(),pos.getZ());
+            if(playerIn.isSneaking())
+                playerIn.openGui(OriginiumCraft.instance, GuiElementManager.GUI_MANUFACTURE_BUILDING,worldIn, GuiElementManager.OPEN_GUI_NON_INTERACT,0,0);
+            else
+                playerIn.openGui(OriginiumCraft.instance, GuiElementManager.GUI_PROCESS_BUILDING,worldIn, GuiElementManager.OPEN_GUI_NON_INTERACT,0,0);
         }
         return true;
     }
