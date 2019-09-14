@@ -19,7 +19,7 @@ public class ProcessBuildingGuiContainer extends GuiContainer {
 
     final ResourceLocation ProcessGuiTexture = new ResourceLocation(ReferenceConsts.MODID,"textures/gui/process_gui.png");
     int guiWidth = 197;
-    int guiHeight = 199;
+    int guiHeight = 200;
     GuiButton closeButton;
 
     ProcessBuildingContainer container;

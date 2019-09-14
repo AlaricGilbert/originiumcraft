@@ -34,7 +34,7 @@ public class ProcessBuildingContainer extends Container {
         super();
         this.world = player.world;
 
-        this.addSlotToContainer(this.outSlot = new SlotItemHandler(outItem, 0, 98, 33) {
+        this.addSlotToContainer(this.outSlot = new SlotItemHandler(outItem, 0, 99, 32) {
 
             @Override
             public boolean isItemValid(@Nonnull ItemStack stack) {
@@ -47,12 +47,12 @@ public class ProcessBuildingContainer extends Container {
 
         for (int i = 0; i < 3; ++i) {
             for (int j = 0; j < 9; ++j) {
-                this.addSlotToContainer(new Slot(player.inventory, j + i * 9 + 9, j * 18 + 8, 94 + i * 18));
+                this.addSlotToContainer(new Slot(player.inventory, j + i * 9 + 9, j * 18 + 8, 95 + i * 18));
             }
         }
 
         for (int i = 0; i < 9; ++i) {
-            this.addSlotToContainer(new Slot(player.inventory, i, i * 18 + 8, 152));
+            this.addSlotToContainer(new Slot(player.inventory, i, i * 18 + 8, 153));
         }
 
     }
