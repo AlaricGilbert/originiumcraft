@@ -1,6 +1,6 @@
 [[English]](README.MD)|[中文]
 
-![](https://img.shields.io/jenkins/build/http/magictea.hicp.net:1919/job/OriginiumCraft.svg)![](https://img.shields.io/jenkins/coverage/jacoco/http/magictea.hicp.net:1919/job/OriginiumCraft.svg)
+![](https://ci.appveyor.com/api/projects/status/github/AlaricGilbert/originiumcraft?svg=true)
 
 # 源石工艺
 
@@ -14,9 +14,7 @@
 
 ## 如何使用
 
-~~从我们的 [Jenkin CI](http://magictea.hicp.net:1919/job/OriginiumCraft) 下载编译好的文件并将它放到你的模组文件夹中~~
-
-**由于一些原因CI暂时下线，请自行编译食用**
+从我们的 [CI](https://ci.appveyor.com/project/AlaricGilbert/originiumcraft/build/artifacts) 下载编译好的文件并将它放到你的模组文件夹中
 
 **注意: 本模组可能需要forge版本高于 2838 才能正常工作！**
 
