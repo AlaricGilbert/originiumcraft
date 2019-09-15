@@ -56,4 +56,9 @@ public class GuiManufactureBuildingFormulaChooser extends GuiScreen {
         super.mouseClicked(mouseX, mouseY, mouseButton);
         returnButton.parentClicked(mouseX,mouseY);
     }
+
+    @Override
+    public boolean doesGuiPauseGame() {
+        return false;
+    }
 }
