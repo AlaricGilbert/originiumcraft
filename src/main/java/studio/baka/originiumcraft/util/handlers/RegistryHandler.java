@@ -4,10 +4,13 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.Tuple;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.registry.EntityEntryBuilder;
+import studio.baka.originiumcraft.client.entity.render.RenderCastle3;
 import studio.baka.originiumcraft.command.CommandFreshPRTS;
+import studio.baka.originiumcraft.entity.EntityCastle3;
 import studio.baka.originiumcraft.entity.EntityRegistryProperties;
 import studio.baka.originiumcraft.entity.OCEntities;
 import studio.baka.originiumcraft.item.OCItems;
@@ -54,14 +57,12 @@ public class RegistryHandler {
             );
         }
     }
+
+
+
     @SubscribeEvent
     public static void onSoundRegister(RegistryEvent.Register<SoundEvent> event){
         event.getRegistry().registerAll(OCSounds.SOUND_EVENTS.toArray(new SoundEvent[0]));
-
-    }
-
-    @SubscribeEvent
-    public static void onEggRegister(RegistryEvent.Register event){
 
     }
 

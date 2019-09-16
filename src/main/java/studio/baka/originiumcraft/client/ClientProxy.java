@@ -6,12 +6,14 @@ import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import studio.baka.originiumcraft.util.handlers.RenderHandler;
 
 public class ClientProxy extends CommonProxy {
 
     /* The preInit events called ONLY in client.*/
     public void preInit(FMLPreInitializationEvent event){
         super.preInit(event);
+        RenderHandler.registerEntityRenders();
     }
     /* The init events called ONLY in client.*/
     public void init(FMLInitializationEvent event){

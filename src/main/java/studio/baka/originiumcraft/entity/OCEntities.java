@@ -10,7 +10,8 @@ import java.util.List;
 public class OCEntities {
     public static final List<Tuple<Class<? extends  Entity>,EntityRegistryProperties>> ENTITIYCLASSES = new ArrayList<>(
             Arrays.asList(
-                    new Tuple<>(EntityOriginiumInsect.class,EntityOriginiumInsect.REGISTRY_PROPERTIES)
+                    new Tuple<>(EntityOriginiumInsect.class,EntityOriginiumInsect.REGISTRY_PROPERTIES),
+                    new Tuple<>(EntityCastle3.class,EntityCastle3.REGISTRY_PROPERTIES)
             )
     );
 }

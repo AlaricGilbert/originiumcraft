@@ -1,5 +1,6 @@
 //Entities
 entity.originium_insect.name=源石虫
+entity.castle_3.name=Castle-3
 //Items
 item.advanced_certificate.name=高级凭证
 item.advanced_reinforcement_material.name=高阶加固建材
